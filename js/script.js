@@ -16,18 +16,6 @@ let skipBtn = document.querySelector("#skip-btn");
 let muteBtn = document.querySelector("#mute-btn");
 videoPlayer.setAttribute("src", videoLink);
 
-// let elem = document.querySelector("#starter-video");
-// videoPlayer.addEventListener("mouseenter", function () {
-//   if (!document.fullscreenElement) {
-//     elem.requestFullscreen().catch((err) => {
-//       alert(
-//         `Error attempting to enable full-screen mode: ${err.message} (${err.name})`
-//       );
-//     });
-//   } else {
-//     document.exit;
-//   }
-// });
 videoPlayer.play();
 videoPlayer.onended = function () {
   window.location.replace(redirectLocation);
