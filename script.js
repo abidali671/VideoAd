@@ -15,7 +15,6 @@ let videoPlayer = document.querySelector("#starter-video");
 let skipBtn = document.querySelector("#skip-btn");
 let muteBtn = document.querySelector("#mute-btn");
 videoPlayer.setAttribute("src", videoLink);
-videoPlayer.muted = true;
 
 // let elem = document.querySelector("#starter-video");
 // videoPlayer.addEventListener("mouseenter", function () {
