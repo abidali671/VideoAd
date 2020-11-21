@@ -5,7 +5,7 @@
 let redirectLocation =
   "https://www.brainpickings.org/?fbclid=IwAR2PMDwZzDngDNZiWa7bKswWXvQfsREiRy12a67KfHhsSOBi6y-w2yEpXao";
 // Video Link
-let videoLink = "../video-1605777762.mp4";
+// let videoLink = "./video-1605777762.mp4";
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -14,7 +14,7 @@ let videoLink = "../video-1605777762.mp4";
 let videoPlayer = document.querySelector("#starter-video");
 let skipBtn = document.querySelector("#skip-btn");
 let muteBtn = document.querySelector("#mute-btn");
-videoPlayer.setAttribute("src", videoLink);
+// videoPlayer.setAttribute("src", videoLink);
 
 videoPlayer.onended = function () {
   window.location.replace(redirectLocation);
