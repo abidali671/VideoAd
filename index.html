@@ -12,14 +12,14 @@
       <video
         id="starter-video"
         type="video/mp4"
-        src="./video-1605777762.mp4"
+        src="./video-1605702577.mp4"
         muted
         autoplay
         playsinline
       >
         Sorry, your browser doesn't support embedded videos.
       </video>
-
+      <button id="play-btn" style="display: none">Play</button>
       <button id="skip-btn">Skip</button>
       <button id="mute-btn"><i class="fas fa-volume-mute"></i></button>
     </div>
@@ -43,10 +43,29 @@
       let muteBtn = document.querySelector("#mute-btn");
       // videoPlayer.setAttribute("src", videoLink);
 
-      videoPlayer.preload = "metadata";
-      videoPlayer.load();
-
       videoPlayer.play();
+      var playBtn = document.getElementById("play-btn");
+      var playPromise = videoPlayer.play();
+
+      playBtn.addEventListener("click", function () {
+        videoPlayer.play();
+      });
+
+      // In browsers that don’t yet support this functionality,
+      // playPromise won’t be defined.
+      if (playPromise !== undefined) {
+        playPromise
+          .then(function () {
+            // Automatic playback started!
+            console.log("its working");
+          })
+          .catch(function (error) {
+            // Automatic playback failed.
+            // Show a UI element to let the user manually start playback.
+            playBtn.style.display = "block";
+          });
+      }
+
       videoPlayer.onended = function () {
         window.location.replace(redirectLocation);
       };
