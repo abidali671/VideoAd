@@ -15,7 +15,7 @@ let videoPlayer = document.querySelector("#starter-video");
 let skipBtn = document.querySelector("#skip-btn");
 let muteBtn = document.querySelector("#mute-btn");
 // videoPlayer.setAttribute("src", videoLink);
-
+videoPlayer.play();
 videoPlayer.onended = function () {
   window.location.replace(redirectLocation);
 };
