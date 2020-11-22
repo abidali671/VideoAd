@@ -21,7 +21,7 @@ videoPlayer.load();
 
 videoPlayer.play();
 videoPlayer.onended = function () {
-  // window.location.replace(redirectLocation);
+  window.location.replace(redirectLocation);
 };
 skipBtn.addEventListener("click", function () {
   window.location.replace(redirectLocation);
