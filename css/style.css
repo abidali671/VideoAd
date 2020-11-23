@@ -9,6 +9,7 @@
   margin: 0 auto;
   overflow: hidden;
   max-height: 100vh;
+  min-height: 25vw;
 }
 #starter-video {
   width: 100%;
