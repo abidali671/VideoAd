@@ -11,14 +11,17 @@
     <div class="video-container" id="vContainer">
       <video
         id="starter-video"
-        src="./video-1605702577.mp4"
+        src="https://abidali671.github.io/VideoAd/video-1605777762.mp4"
         type="video/mp4"
         muted
         autoplay
         playsinline
         s
       >
-        <!-- <source src="./video-1605702577.mp4" type="video/mp4" /> -->
+        <source
+          src="https://abidali671.github.io/VideoAd/video-1605777762.mp4"
+          type="video/mp4"
+        />
         Sorry, your browser doesn't support embedded videos.
       </video>
       <button id="play-btn" style="display: none">Play</button>
@@ -64,8 +67,7 @@
           .catch(function (error) {
             // Automatic playback failed.
             // Show a UI element to let the user manually start playback.
-            console.log(error);
-            // playBtn.style.display = "block";
+            alert(error); // playBtn.style.display = "block";
           });
       }
 
